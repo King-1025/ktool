@@ -1,0 +1,17 @@
+[package]
+name = "ktool"
+version = "0.1.0"
+authors = ["King-1025 <1543641386@qq.com>"]
+edition = "2018"
+description = "获取爆料革命GLive文贵先生视频、抖奶视频。"
+license = "MIT/Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+des = "0.3.0"
+block-modes = "0.3.3"
+base64 = "0.11.0"
+curl = "0.4.26"
+json = "*"
+shell_command = "*"
