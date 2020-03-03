@@ -1,0 +1,20 @@
+name: 发布crate
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检索仓库 
+        uses: actions/checkout@v1
+
+      - name: 准备环境
+        run: ./script/check
+
+      - name: 执行发布
+        run: ./script/publish
+        env:
+          RUST_PUBLISH_TOKEN: ${{ secrets.RUST_PUBLISH_TOKEN }}

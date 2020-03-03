@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo 发布Crate...
+if [ ! -z $RUST_PUBLISH_TOKEN ]; then
+   export GLIVE_EXE="./script/gff json"
+   cargo publish --token "$RUST_PUBLISH_TOKEN" -j4
+else
+   echo Not found RUST_PUBLISH_TOKEN !!!
+   exit 1
+fi
